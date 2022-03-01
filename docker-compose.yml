@@ -1,0 +1,20 @@
+version: "3.3"
+services:
+  full_node:
+    image: "woodcoin-full-node:latest"
+    command: rm ./woodcoind
+    command: woodcoind -debug -gen -upnp -dnsseed -listen -dns -conf=/root/.woodcoin/woodcoin.conf & disown
+    command: sleep 30s
+    command: woodcoin-cli getblockchaininfo >> logs.txt
+    # command: woodcoind setgenerate true > logs.txt
+    volumes:
+      - "./woodcoin.conf:/root/.woodcoin/woodcoin.conf"
+      - woodcoin:/root/.woodcoin/
+      # - "./logsnet.txt:/root/logsnet.txt"
+    ports:
+      - "9067:7885"
+      - "18338:9885"
+      - "8998:9885"
+volumes:
+  woodcoin: {}
+# docker build --no-cache -t woodcoin-full-node:latest -f dockerfiles/Dockerfile .
