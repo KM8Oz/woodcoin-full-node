@@ -1,7 +1,7 @@
 version: "3.3"
 services:
   full_node:
-    image: "woodcoin-full-node:latest"
+    image: "kmoz/woodcoin-full-node:latest"
     command: rm ./woodcoind
     command: woodcoind -debug -gen -upnp -dnsseed -listen -dns -conf=/root/.woodcoin/woodcoin.conf & disown
     command: sleep 30s
