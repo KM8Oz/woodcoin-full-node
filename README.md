@@ -2,4 +2,4 @@
 # edits:
 > add your configuration in `woodcoin.simple.conf` and rename it to `woodcoin.conf`
 
-support me throw woodcoin: `WbeXmkpun7XX2VFzhfs5RWsupQ7fuXKh12`
+support me throw woodcoin: `WkUBeu9rc74nU5Bd7dd3D5sFmQYPBacTC3`
