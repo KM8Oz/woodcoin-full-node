@@ -18,7 +18,7 @@ RUN export TERM=xterm-256color
 # RUN bash -c "history -a"
 # RUN ls
 COPY ./context/* ./
-RUN tar -xzvf ./woodcoin.tar.gz 
+RUN tar -xzvf ./woodcore.tar.gz 
 RUN for i in `cat ./listboostlib.txt`; do wget $i; done
 RUN dpkg -i *.deb
 RUN chmod -R +x ./woodcoin*
